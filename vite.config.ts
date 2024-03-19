@@ -7,7 +7,6 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
 
   return {
-    // vite config
     define: {
       __APP_ENV__: JSON.stringify(env.APP_ENV),
     },
@@ -29,21 +28,3 @@ export default defineConfig(({ mode }) => {
     },
   }
 });
-
-// export default defineConfig({
-//   plugins: [react()],
-//   server: {
-//     port: 3000,
-//     fs: {
-//       cachedChecks: false
-//     }
-//   },
-//   resolve: {
-//     alias: {
-//       '@images': path.resolve(__dirname, 'src/assets/images'),
-//       '@core': path.resolve(__dirname, 'src/core'),
-//       '@features': path.resolve(__dirname, 'src/features'),
-//       '@shared': path.resolve(__dirname, 'src/shared')
-//     },
-//   },
-// })
